@@ -1,16 +1,20 @@
 /* Arrays_Cheat_Sheet */
 
 // Checks length of array, in this case there are 3 numbers in array
-[(1, 2, 3)].length; // 3
+const length = [1, 2, 3].length; // 3
+console.log("length = " + length);
 
 // Adds member into the last position of an array, specifies value '4'
-[(1, 2, 3)].push(4); // [1,2,3,4]
+const push = [1, 2, 3].push(4); // [1,2,3,4]
+console.log("push = " + push);
 
 // Adds member into the first position of an array, specifies value '0'
-[1, 2, 3].unshift(0); // [0,1,2,3]
+const unshift = [1, 2, 3].unshift(0); // [0,1,2,3]
+console.log(unshift);
 
 // Removes member from last position of array
-[1, 2, 3].pop(); // [1,2]
+const pop = [1, 2, 3].pop(); // [1,2]
+console.log(pop);
 
 // Removes member from first position of array
 [1, 2, 3].shift(); // [2,3]
@@ -37,7 +41,8 @@
 [1, 2, 3].some((num) => num == 3); // true
 
 // Replaces values of members of array with specified value of 10
-[1, 2, 3].fill(10); // [10,10,10]
+const fill = [1, 2, 3].fill(10); // [10,10,10]
+console.log(fill);
 
 // Passes in the return value from the calculation on the preceding element, initial value '0'
 [1, 2, 3].reduce((acc, num) => acc + num, 0); // 6
