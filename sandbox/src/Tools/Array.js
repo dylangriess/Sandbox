@@ -17,35 +17,35 @@ const pop = [1, 2, 3].pop(); // [1,2]
 console.log("pop = " + pop);
 
 // Removes member from first position of array
-[1, 2, 3].shift(); // [2,3]
+const shift = [1, 2, 3].shift(); // [2,3]
 console.log("shift = " + shift);
 
 // Retrieves value from index position, specifies index position '2'
-[1, 2, 3].at(2); // 3
+const at = [1, 2, 3].at(2); // 3
 console.log("at = " + at);
 
 // Retrieves index position from value specified, specified location of '3'
-[1, 2, 3].indexOf(3); // 2
+const indexOf = [1, 2, 3].indexOf(3); // 2
 console.log("indexOf = " + indexOf);
 
 // Boolean value determined if value is present in array
-[1, 2, 3].includes(3); // true
+const includes = [1, 2, 3].includes(3); // true
 console.log("includes = " + includes);
 
 // Maps through each member of array and multiplies each value * power of 2
-[1, 2, 3].map((num) => Math.pow(num, 2)); // [1,4,9]
+const map = [1, 2, 3].map((num) => Math.pow(num, 2)); // [1,4,9]
 console.log("map = " + map);
 
 // Filters through each member of array and removes numbers divisible by 2
-[1, 2, 3].filter((num) => num % 2); // [1,3]
+const filter = [1, 2, 3].filter((num) => num % 2); // [1,3]
 console.log("filter = " + filter);
 
 // Boolean value returned by determining if each member of array is greater than 1
-[1, 2, 3].every((num) => num > 1); // false
+const every = [1, 2, 3].every((num) => num > 1); // false
 console.log("every = " + every);
 
 // Boolean value returned by determining if some number equals 3
-[1, 2, 3].some((num) => num == 3); // true
+const some = [1, 2, 3].some((num) => num == 3); // true
 console.log("some = " + some);
 
 // Replaces values of members of array with specified value of 10
@@ -53,54 +53,54 @@ const fill = [1, 2, 3].fill(10); // [10,10,10]
 console.log("fill = " + fill);
 
 // Passes in the return value from the calculation on the preceding element, initial value '0'
-[1, 2, 3].reduce((acc, num) => acc + num, 0); // 6
+const reduce = [1, 2, 3].reduce((acc, num) => acc + num, 0); // 6
 console.log("reduce = " + reduce);
 
 // Adds members of array to original array
-[1, 2, 3].concat([4, 5]); // [1,2,3,4,5]
+const concat = [1, 2, 3].concat([4, 5]); // [1,2,3,4,5]
 console.log("concat = " + concat);
 
 // Reverses values of array in opposite order
-[1, 2, 3].reverse(); // [3,2,1]
+const reverse = [1, 2, 3].reverse(); // [3,2,1]
 console.log("reverse = " + reverse);
 
 // Sorts values of an array from least to greatest
-[1, 2, 3].sort(); // [1,2,3]
+const sort = [1, 2, 3].sort(); // [1,2,3]
 console.log("sort = " + sort);
 
 // Joins each member of an array with specified character (-)
-[1, 2, 3].join("-"); // 1-2-3
+const join = [1, 2, 3].join("-"); // 1-2-3
 console.log("join = " + join);
 
 // Creates a new array with all sub-array elements concatenated into it
-[1, 2, [3]].flat(); // [1,2,3]
+const flat = [1, 2, [3]].flat(); // [1,2,3]
 console.log("flat = " + flat);
 
 // Returns the first element in the provided array that satisfies the provided testing function
-[1, 2, 3].find((num, i) => i === 1); // 2
+const find = [1, 2, 3].find((num, i) => i === 1); // 2
 console.log("find = " + find);
 
 // Returns the index of the first element in an array that satisfies the provided testing function
-[1, 2, 3].findIndex((num) => num === 2); // 1
+const findIndex = [1, 2, 3].findIndex((num) => num === 2); // 1
 console.log("findIndex = " + findIndex);
 
 // Returns a string representing the specified array and its elements
-[1, 2, 3].toString(); // 1,2,3
+const toString = [1, 2, 3].toString(); // 1,2,3
 console.log("toString = " + toString);
 
 // Returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included)
-[1, 2, 3].slice(1, 3); // [2,3]
+const slice = [1, 2, 3].slice(1, 3); // [2,3]
 console.log("slice = " + slice);
 
 // Changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
 // Syntax: splice(start, deleteCount, item1, item2, itemN)
-[1, 4].splice(1, 0, 2, 3); // [1,2,3,4]
+const splice = [1, 4].splice(1, 0, 2, 3); // [1,2,3,4]
 console.log("splice = " + splice);
 
 // Boolean value returned based if passed value is an Array
-Array.isArray("[1,2,3]"); // false
+const isArray = Array.isArray("[1,2,3]"); // false
 console.log("isArray = " + isArray);
 
 // Creates a new, shallow-copied Array instance from an iterable or array-like object.
-Array.from("123"); // ['1','2','3']
+const from = Array.from("123"); // ['1','2','3']
 console.log("from = " + from);
