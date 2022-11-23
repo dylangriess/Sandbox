@@ -27,13 +27,22 @@ console.log("unshift practice = " + unshiftPractice);
 const pop = [1, 2, 3].pop(); // [1,2]
 console.log("pop = " + pop);
 
+const popPractice = ["apple", "orange", "pear", "banana"].pop();
+console.log("pop practice = " + popPractice);
+
 // Removes member from first position of array
 const shift = [1, 2, 3].shift(); // [2,3]
 console.log("shift = " + shift);
 
+const shiftPractice = ["apple", "orange", "pear", "banana"].shift();
+console.log("shift practice = " + shiftPractice);
+
 // Retrieves value from index position, specifies index position '2'
 const at = [1, 2, 3].at(2); // 3
 console.log("at = " + at);
+
+const atPractice = ["apple", "orange", "pear", "banana"].at(2);
+console.log("at practice = " + atPractice);
 
 // Retrieves index position from value specified, specified location of '3'
 const indexOf = [1, 2, 3].indexOf(3); // 2
