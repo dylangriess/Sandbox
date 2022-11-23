@@ -4,13 +4,24 @@
 const length = [1, 2, 3].length; // 3
 console.log("length = " + length);
 
+const lengthPractice = ["apple", "orange", "pear", "banana"].length;
+console.log("length practice = " + lengthPractice);
+
 // Adds member into the last position of an array, specifies value '4'
 const push = [1, 2, 3].push(4); // [1,2,3,4]
 console.log("push = " + push);
 
+const pushPractice = ["apple", "orange", "pear", "banana"].push("blueberry");
+console.log("push practice = " + pushPractice);
+
 // Adds member into the first position of an array, specifies value '0'
 const unshift = [1, 2, 3].unshift(0); // [0,1,2,3]
 console.log("unshift = " + unshift);
+
+const unshiftPractice = ["apple", "orange", "pear", "banana"].unshift(
+  "apricot"
+);
+console.log("unshift practice = " + unshiftPractice);
 
 // Removes member from last position of array
 const pop = [1, 2, 3].pop(); // [1,2]
