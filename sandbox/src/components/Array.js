@@ -48,13 +48,26 @@ console.log("at practice = " + atPractice);
 const indexOf = [1, 2, 3].indexOf(3); // 2
 console.log("indexOf = " + indexOf);
 
+const indexOfPractice = ["apple", "orange", "pear", "banana"].indexOf("orange");
+console.log("indexOf practice = " + indexOfPractice);
+
 // Boolean value determined if value is present in array
 const includes = [1, 2, 3].includes(3); // true
 console.log("includes = " + includes);
 
+const includesPractice = ["apple", "orange", "pear", "banana"].includes(
+  "blueberry"
+);
+console.log("includes practice = " + includesPractice);
+
 // Maps through each member of array and multiplies each value * power of 2
 const map = [1, 2, 3].map((num) => Math.pow(num, 2)); // [1,4,9]
 console.log("map = " + map);
+
+const mapPractice = ["apple", "orange", "pear", "banana"].map((fruit) =>
+  fruit.toUpperCase()
+);
+console.log("map practice = " + mapPractice);
 
 // Filters through each member of array and removes numbers divisible by 2
 const filter = [1, 2, 3].filter((num) => num % 2); // [1,3]
