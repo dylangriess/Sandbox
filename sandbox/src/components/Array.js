@@ -5,14 +5,14 @@ const length = [1, 2, 3].length; // 3
 console.log("length = " + length);
 
 const lengthPractice = ["apple", "orange", "pear", "banana"].length;
-console.log("length practice = " + lengthPractice);
+console.log("length practice = " + lengthPractice); // 4
 
 // Adds member into the last position of an array, specifies value '4'
 const push = [1, 2, 3].push(4); // [1,2,3,4]
 console.log("push = " + push);
 
 const pushPractice = ["apple", "orange", "pear", "banana"].push("blueberry");
-console.log("push practice = " + pushPractice);
+console.log("push practice = " + pushPractice); // 5
 
 // Adds member into the first position of an array, specifies value '0'
 const unshift = [1, 2, 3].unshift(0); // [0,1,2,3]
@@ -21,7 +21,7 @@ console.log("unshift = " + unshift);
 const unshiftPractice = ["apple", "orange", "pear", "banana"].unshift(
   "apricot"
 );
-console.log("unshift practice = " + unshiftPractice);
+console.log("unshift practice = " + unshiftPractice); // 5
 
 // Removes member from last position of array
 const pop = [1, 2, 3].pop(); // [1,2]
@@ -35,14 +35,14 @@ const shift = [1, 2, 3].shift(); // [2,3]
 console.log("shift = " + shift);
 
 const shiftPractice = ["apple", "orange", "pear", "banana"].shift();
-console.log("shift practice = " + shiftPractice);
+console.log("shift practice = " + shiftPractice); // apple
 
 // Retrieves value from index position, specifies index position '2'
 const at = [1, 2, 3].at(2); // 3
 console.log("at = " + at);
 
 const atPractice = ["apple", "orange", "pear", "banana"].at(2);
-console.log("at practice = " + atPractice);
+console.log("at practice = " + atPractice); // pear
 
 // Retrieves index position from value specified, specified location of '3'
 const indexOf = [1, 2, 3].indexOf(3); // 2
@@ -58,7 +58,7 @@ console.log("includes = " + includes);
 const includesPractice = ["apple", "orange", "pear", "banana"].includes(
   "blueberry"
 );
-console.log("includes practice = " + includesPractice);
+console.log("includes practice = " + includesPractice); // false
 
 // Maps through each member of array and multiplies each value * power of 2
 const map = [1, 2, 3].map((num) => Math.pow(num, 2)); // [1,4,9]
@@ -67,7 +67,7 @@ console.log("map = " + map);
 const mapPractice = ["apple", "orange", "pear", "banana"].map((fruit) =>
   fruit.toUpperCase()
 );
-console.log("map practice = " + mapPractice);
+console.log("map practice = " + mapPractice); // APPLE, ORANGE, PEAR, BANANA
 
 // Filters through each member of array and removes numbers divisible by 2
 const filter = [1, 2, 3].filter((num) => num % 2); // [1,3]
@@ -91,9 +91,17 @@ console.log("every practice = " + everyPractice); // false
 const some = [1, 2, 3].some((num) => num === 3); // true
 console.log("some = " + some);
 
+const somePractice = ["apple", "orange", "pear", "banana"].some(
+  (fruit) => fruit.length === 4
+);
+console.log("some practice = " + somePractice); // true
+
 // Replaces values of members of array with specified value of 10
 const fill = [1, 2, 3].fill(10); // [10,10,10]
 console.log("fill = " + fill);
+
+const fillPractice = ["apple", "orange", "pear", "banana"].fill("orange");
+console.log("fill practice = " + fillPractice);
 
 // Passes in the return value from the calculation on the preceding element, initial value '0'
 const reduce = [1, 2, 3].reduce((acc, num) => acc + num, 0); // 6
