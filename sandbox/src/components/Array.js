@@ -73,9 +73,19 @@ console.log("map practice = " + mapPractice);
 const filter = [1, 2, 3].filter((num) => num % 2); // [1,3]
 console.log("filter = " + filter);
 
+const filterPractice = ["apple", "orange", "pear", "banana"].filter(
+  (fruit) => fruit.length > 5
+);
+console.log("filter practice = " + filterPractice); // orange, banana
+
 // Boolean value returned by determining if each member of array is greater than 1
 const every = [1, 2, 3].every((num) => num > 1); // false
 console.log("every = " + every);
+
+const everyPractice = ["apple", "orange", "pear", "banana"].every(
+  (fruit) => fruit.length > 5
+);
+console.log("every practice = " + everyPractice); // false
 
 // Boolean value returned by determining if some number equals 3
 const some = [1, 2, 3].some((num) => num === 3); // true
