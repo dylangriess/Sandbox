@@ -101,19 +101,31 @@ const fill = [1, 2, 3].fill(10); // [10,10,10]
 console.log("fill = " + fill);
 
 const fillPractice = ["apple", "orange", "pear", "banana"].fill("orange");
-console.log("fill practice = " + fillPractice);
+console.log("fill practice = " + fillPractice); // orange, orange, orange, orange
 
 // Passes in the return value from the calculation on the preceding element, initial value '0'
 const reduce = [1, 2, 3].reduce((acc, num) => acc + num, 0); // 6
 console.log("reduce = " + reduce);
 
+const reducePractice = [2, 4, 12].reduce((acc, num) => acc + num, 0); // 18
+console.log("reduce practice = " + reducePractice);
+
 // Adds members of array to original array
 const concat = [1, 2, 3].concat([4, 5]); // [1,2,3,4,5]
 console.log("concat = " + concat);
 
+const concatPractice = ["apple", "orange", "pear", "banana"].concat([
+  "blueberry",
+  "strawberry",
+]);
+console.log("concat practice = " + concatPractice); // apple, orange, pear, banana, blueberry, strawberry
+
 // Reverses values of array in opposite order
 const reverse = [1, 2, 3].reverse(); // [3,2,1]
 console.log("reverse = " + reverse);
+
+const reversePractice = ["apple", "orange", "pear", "banana"].reverse();
+console.log("reverse practice = " + reversePractice); // banana, pear, orange, apple
 
 // Sorts values of an array from least to greatest
 const sort = [1, 2, 3].sort(); // [1,2,3]
