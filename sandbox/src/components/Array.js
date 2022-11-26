@@ -169,19 +169,34 @@ console.log("findIndexPractice = " + findIndexPractice.findIndex(isPear)); // 2
 const toString = [1, 2, 3].toString(); // 1,2,3
 console.log("toString = " + toString);
 
+const toStringPractice = [true, false, false].toString();
+console.log("toString practice = " + toStringPractice); // true, false, false
+
 // Returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included)
 const slice = [1, 2, 3].slice(1, 3); // [2,3]
 console.log("slice = " + slice);
+
+const slicePractice = ["apple", "orange", "pear", "banana"].slice(0, 2);
+console.log("slice practice = " + slicePractice); // apple, orange
 
 // Changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.
 // Syntax: splice(start, deleteCount, item1, item2, itemN)
 const splice = [1, 4].splice(1, 0, 2, 3); // [1,2,3,4]
 console.log("splice = " + splice);
 
+const splicePractice = ["apple", "orange"].splice(1, 0, "pear", "banana");
+console.log("splice practice = " + splicePractice); // apple, pear, banana, orange
+
 // Boolean value returned based if passed value is an Array
-const isArray = Array.isArray("[1,2,3]"); // false
+const isArray = Array.isArray("[1,2,3]"); // false --> this is string
 console.log("isArray = " + isArray);
+
+const isArrayPractice = Array.isArray(["pear", "orange"]);
+console.log("isArray practice = " + isArrayPractice); // true
 
 // Creates a new, shallow-copied Array instance from an iterable or array-like object.
 const from = Array.from("123"); // ['1','2','3']
 console.log("from = " + from);
+
+const fromPractice = Array.from("apple");
+console.log("from practice = " + fromPractice); // a,p,p,l,e
