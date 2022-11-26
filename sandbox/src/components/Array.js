@@ -152,9 +152,18 @@ console.log("flat practice = " + flatPractice); // apple, orange, pear, banana
 const find = [1, 2, 3].find((num, i) => i === 1); // 2
 console.log("find = " + find);
 
+const findPractice = ["apple", "orange", "pear", "banana"].find(
+  (fruit, i) => i === 2
+);
+console.log("find practice = " + findPractice); // pear
+
 // Returns the index of the first element in an array that satisfies the provided testing function
 const findIndex = [1, 2, 3].findIndex((num) => num === 2); // 1
 console.log("findIndex = " + findIndex);
+
+const findIndexPractice = ["apple", "orange", "pear", "banana"];
+const isPear = (element) => element === "pear";
+console.log("findIndexPractice = " + findIndexPractice.findIndex(isPear)); // 2
 
 // Returns a string representing the specified array and its elements
 const toString = [1, 2, 3].toString(); // 1,2,3
