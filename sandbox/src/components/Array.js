@@ -1,4 +1,4 @@
-/* Arrays_Cheat_Sheet */
+/* ARRAYS CHEAT SHEET */
 
 // LENGTH
 // Checks length of array, in this case there are 3 numbers in array
