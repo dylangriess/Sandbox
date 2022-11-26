@@ -131,13 +131,22 @@ console.log("reverse practice = " + reversePractice); // banana, pear, orange, a
 const sort = [1, 2, 3].sort(); // [1,2,3]
 console.log("sort = " + sort);
 
+const sortPractice = ["apple", "orange", "pear", "banana"].sort();
+console.log("sort practice = " + sortPractice); // apple, banana, orange, pear
+
 // Joins each member of an array with specified character (-)
 const join = [1, 2, 3].join("-"); // 1-2-3
 console.log("join = " + join);
 
+const joinPractice = ["apple", "orange", "pear", "banana"].join(" & ");
+console.log("join practice = " + joinPractice); // apple & orange & pear & banana
+
 // Creates a new array with all sub-array elements concatenated into it
 const flat = [1, 2, [3]].flat(); // [1,2,3]
 console.log("flat = " + flat);
+
+const flatPractice = ["apple", "orange", "pear", ["banana"]].flat();
+console.log("flat practice = " + flatPractice); // apple, orange, pear, banana
 
 // Returns the first element in the provided array that satisfies the provided testing function
 const find = [1, 2, 3].find((num, i) => i === 1); // 2
