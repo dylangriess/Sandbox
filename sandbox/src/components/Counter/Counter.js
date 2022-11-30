@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 
 function Counter() {
   const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    console.log(count);
+  }, [count]);
 
   function adjustCount(amount) {
     setCount((currentCount) => {
