@@ -1,5 +1,6 @@
 import React from "react";
 import { useRef } from "react";
+import "./Form.css";
 
 function Form() {
   const emailRef = useRef();
@@ -20,22 +21,24 @@ function Form() {
   }
 
   return (
-    <div>
+    <>
       <h1>FORM</h1>
-      <form onSubmit={onSubmit}>
-        <label htmlFor="email">Email</label>
-        <input ref={emailRef} type="email" name="email" id="email" />
-        <label htmlFor="password">Password</label>
-        <input
-          ref={passwordRef}
-          type="password"
-          name="password"
-          id="password"
-        />
-        <button type="submit">Submit</button>
-        <span className="confirmation"></span>
-      </form>
-    </div>
+      <div className="formContainer">
+        <form className="form" onSubmit={onSubmit}>
+          <label htmlFor="email">Email</label>
+          <input ref={emailRef} type="email" name="email" id="email" />
+          <label htmlFor="password">Password</label>
+          <input
+            ref={passwordRef}
+            type="password"
+            name="password"
+            id="password"
+          />
+          <button type="submit">Submit</button>
+          <span className="confirmation"></span>
+        </form>
+      </div>
+    </>
   );
 }
 
