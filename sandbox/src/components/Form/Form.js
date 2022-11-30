@@ -7,7 +7,10 @@ function Form() {
 
   function onSubmit(e) {
     e.preventDefault();
-    // console.log({ email, password });
+    console.log({
+      email: emailRef.current.value,
+      password: passwordRef.current.value,
+    });
   }
 
   return (
