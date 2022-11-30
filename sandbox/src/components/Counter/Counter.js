@@ -16,6 +16,7 @@ function Counter() {
 
   return (
     <>
+      <h1>COUNTER</h1>
       <button onClick={() => adjustCount(-1)}>-</button>
       <span>{count}</span>
       <button onClick={() => adjustCount(1)}>+</button>
