@@ -3,6 +3,13 @@ import React from "react";
 const listsContainer = document.querySelector("[data-lists]");
 const newListForm = document.querySelector("[data-new-list-form]");
 const newListInput = document.querySelector("[data-new-list-input]");
+const deleteListButton = document.querySelector("[data-delete-list-button]");
+const listDisplayContainer = document.querySelector(
+  "[data-list-display-container]"
+);
+const listTitleElement = document.querySelector("[data-list-title]");
+const listCountElement = document.querySelector("[data-list-count]");
+const tasksContainer = document.querySelector("[data-tasks]");
 
 const LOCAL_STORAGE_LIST_KEY = "task.lists";
 const LOCAL_STORAGE_SELECTED_LIST_ID_KEY = "task.lists";
@@ -14,6 +21,12 @@ listsContainer.addEventListener("click", (e) => {
     selectedListId = e.target.dataset.listId;
     saveAndRender();
   }
+});
+
+deleteListButton.addEventListener("click", (e) => {
+  lists = lists.filter((list) => list.id !== selectedListId);
+  selectedListId = null;
+  saveAndRender();
 });
 
 newListForm.addEventListener("submit", (e) => {
@@ -46,6 +59,9 @@ function save() {
 
 function render() {
   clearElement(listsContainer);
+}
+
+function renderLists() {
   lists.forEach((list) => {
     const listElement = document.createElement("li");
     listElement.dataset.listId = list.id;
