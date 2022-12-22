@@ -68,11 +68,20 @@ function render() {
     listDisplayContainer.style.display = "";
     listTitleElement.innerText = selectedList.name;
     renderTaskCount(selectedList);
+    clearElement(tasksContainer);
+    renderTasks(selectedList);
   }
 }
 
+function renderTasks(selectedList) {
+  selectedList.tasks.forEach();
+}
 function renderTaskCount(selectedList) {
-  const incompleteTasks = selectedList.tasks.filter((task) => !task.complete);
+  const incompleteTaskCount = selectedList.tasks.filter(
+    (task) => !task.complete
+  ).length;
+  const taskString = incompleteTaskCount === 1 ? "task" : "tasks";
+  listCountElement.innerText = `${incompleteTaskCount} ${taskString} remaining.`;
 }
 
 function renderLists() {
