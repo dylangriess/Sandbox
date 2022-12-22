@@ -20,9 +20,19 @@ let lists = JSON.parse(localStorage.getItem(LOCAL_STORAGE_LIST_KEY)) || [];
 let selectedListId = localStorage.getItem(LOCAL_STORAGE_SELECTED_LIST_ID_KEY);
 
 listsContainer.addEventListener("click", (e) => {
-  if (e.target.tagname.toLowerCase() === "li") {
+  if (e.target.tagName.toLowerCase() === "li") {
     selectedListId = e.target.dataset.listId;
     saveAndRender();
+  }
+});
+
+tasksContainer.addEventListener("click", (e) => {
+  if (e.target.tagName.toLowerCase() === "input") {
+    const selectedList = lists.find((list) => list.id === selectedList);
+    const selectedTask = selectedList.find((task) => task.id === e.target.id);
+    selectedTask.complete = e.target.checked;
+    save();
+    renderTaskCount(selectedList);
   }
 });
 
