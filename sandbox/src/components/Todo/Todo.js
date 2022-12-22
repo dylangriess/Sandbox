@@ -11,6 +11,8 @@ const listTitleElement = document.querySelector("[data-list-title]");
 const listCountElement = document.querySelector("[data-list-count]");
 const tasksContainer = document.querySelector("[data-tasks]");
 const taskTemplate = document.getElementById("task-template");
+const newTaskForm = document.querySelector("[data-new-task-form");
+const newTaskInput = document.querySelector("[data-new-task-input");
 
 const LOCAL_STORAGE_LIST_KEY = "task.lists";
 const LOCAL_STORAGE_SELECTED_LIST_ID_KEY = "task.lists";
@@ -34,7 +36,19 @@ newListForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const listName = newListInput.value;
   if (listName == null || listName === "") return;
-  const list = createList(listName);
+  {
+    const list = createList(listName);
+    newListInput.value = null;
+    lists.push(list);
+  }
+  render();
+});
+
+newTaskForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const taskName = newTaskInput.value;
+  if (taskName == null || taskName === "") return;
+  const task = createTask(taskName);
   newListInput.value = null;
   lists.push(list);
   render();
@@ -45,6 +59,14 @@ function createList(name) {
     id: Date.now().toString(),
     name: name,
     tasks: [],
+  };
+}
+
+function createTask(name) {
+  return {
+    id: Date.now().toString(),
+    name: name,
+    complete: false,
   };
 }
 
