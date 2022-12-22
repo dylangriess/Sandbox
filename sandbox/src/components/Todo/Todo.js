@@ -49,9 +49,10 @@ newTaskForm.addEventListener("submit", (e) => {
   const taskName = newTaskInput.value;
   if (taskName == null || taskName === "") return;
   const task = createTask(taskName);
-  newListInput.value = null;
-  lists.push(list);
-  render();
+  newTaskInput.value = null;
+  const selectedList = lists.find((list) => list.id === selectedList);
+  selectedList.tasks.push(task);
+  saveAndRender();
 });
 
 function createList(name) {
