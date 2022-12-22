@@ -41,11 +41,11 @@ newListForm.addEventListener("submit", (e) => {
 });
 
 function createList(name) {
-  {
-    id: Date.now().toString();
-    name: name;
-    tasks: [];
-  }
+  return {
+    id: Date.now().toString(),
+    name: name,
+    tasks: [],
+  };
 }
 
 function saveAndRender() {
@@ -81,6 +81,9 @@ function renderTasks(selectedList) {
     checkbox.id = task.id;
     checkbox.checked = task.complete;
     const label = taskElement.querySelector("label");
+    label.htmlFor = task.id;
+    label.append(task.name);
+    tasksContainer.appendChild(taskElement);
   });
 }
 
