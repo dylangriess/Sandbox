@@ -13,4 +13,11 @@ const calculator = {
   tan: (a) => Math.tan(a),
   pi: () => Math.PI,
   e: () => Math.E,
+  solveExpression: (expression) => {
+    try {
+      return eval(expression);
+    } catch (error) {
+      console.error(error.message);
+    }
+  },
 };
