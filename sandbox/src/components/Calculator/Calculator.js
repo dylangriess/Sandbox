@@ -8,4 +8,9 @@ const calculator = {
   pow: (a, b) => Math.pow(a, b),
   log: (a) => Math.log10(a),
   exp: (a) => Math.exp(a),
+  sin: (a) => Math.sin(a),
+  cos: (a) => Math.cos(a),
+  tan: (a) => Math.tan(a),
+  pi: () => Math.PI,
+  e: () => Math.E,
 };
