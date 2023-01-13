@@ -23,7 +23,10 @@ const questions = [
   },
 ];
 
-function Quiz() {
+function TriviaGame() {
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [score, setScore] = useState(0);
+
   return <div>Quiz</div>;
 }
 
