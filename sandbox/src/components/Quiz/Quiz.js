@@ -27,6 +27,18 @@ function TriviaGame() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
 
+  function checkAnswer(index) {
+    if (
+      questions[currentQuestion].options[index] ===
+      questions[currentQuestion].answer
+    ) {
+      setScore(score + 1);
+      alert("Correct!");
+    } else {
+      alert("Incorrect!");
+    }
+  }
+
   return <div>Quiz</div>;
 }
 
