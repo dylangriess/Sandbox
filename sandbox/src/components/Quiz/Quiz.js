@@ -102,6 +102,7 @@ function Quiz() {
     setCurrentQuestion(currentQuestion + 1);
     if (currentQuestion >= 9) {
       alert(`Game over! Your score is ${score} out of 10!`);
+      clearInterval(timer);
       return;
     }
   }
@@ -121,12 +122,15 @@ function Quiz() {
   return (
     <div>
       <h1>QUIZ</h1>
-      <h4>{questions[currentQuestion].question}</h4>
+      <h3>Time remaining: {timeLeft} seconds</h3>
+      <h3>{questions[currentQuestion].question}</h3>
       {questions[currentQuestion].options.map((option, index) => (
         <button key={index} onClick={() => checkAnswer(index)}>
           {option}
         </button>
       ))}
+      {currentQuestion === 0 && <button onClick={startTimer}>Start</button>}
+      {currentQuestion !== 0 && <button onClick={stopTimer}>Stop</button>}
     </div>
   );
 }
