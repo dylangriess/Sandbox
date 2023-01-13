@@ -111,6 +111,7 @@ function Quiz() {
     setTimer(
       setInterval(() => {
         setTimeLeft(timeLeft - 1);
+        if (timeLeft === 0) clearInterval(timer);
       }, 1000)
     );
   }
