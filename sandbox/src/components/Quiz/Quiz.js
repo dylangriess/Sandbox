@@ -23,7 +23,7 @@ const questions = [
   },
 ];
 
-function TriviaGame() {
+function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
 
@@ -44,7 +44,16 @@ function TriviaGame() {
     }
   }
 
-  return <div>Quiz</div>;
+  return (
+    <div>
+      <h1>{questions[currentQuestion].question}</h1>
+      {questions[currentQuestion].options.map((option, index) => (
+        <button key={index} onClick={() => checkAnswer(index)}>
+          {option}
+        </button>
+      ))}
+    </div>
+  );
 }
 
 export default Quiz;
