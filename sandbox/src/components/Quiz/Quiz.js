@@ -86,6 +86,8 @@ const questions = [
 function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
+  const [timeLeft, setTimeLeft] = useState(60);
+  const [timer, setTimer] = useState(null);
 
   function checkAnswer(index) {
     if (
