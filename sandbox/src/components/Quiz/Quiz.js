@@ -98,15 +98,16 @@ function Quiz() {
       alert("Incorrect!");
     }
     setCurrentQuestion(currentQuestion + 1);
-    if (currentQuestion >= 3) {
-      alert(`Game over! Your score is ${score}`);
+    if (currentQuestion >= 9) {
+      alert(`Game over! Your score is ${score} out of 10!`);
       return;
     }
   }
 
   return (
     <div>
-      <h1>{questions[currentQuestion].question}</h1>
+      <h1>QUIZ</h1>
+      <h4>{questions[currentQuestion].question}</h4>
       {questions[currentQuestion].options.map((option, index) => (
         <button key={index} onClick={() => checkAnswer(index)}>
           {option}
