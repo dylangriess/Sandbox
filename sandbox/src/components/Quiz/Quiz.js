@@ -21,6 +21,66 @@ const questions = [
     ],
     answer: "Leonardo da Vinci",
   },
+  {
+    question: "What is the capital of the United States?",
+    options: ["New York", "Washington D.C.", "Los Angeles", "Chicago"],
+    answer: "Washington D.C.",
+  },
+  {
+    question: "What is the largest ocean on Earth?",
+    options: ["Atlantic", "Pacific", "Indian", "Southern"],
+    answer: "Pacific",
+  },
+  {
+    question: "Which country has the Great Wall of China?",
+    options: ["China", "India", "Russia", "USA"],
+    answer: "China",
+  },
+  {
+    question: "What is the highest mountain peak in the world?",
+    options: ["Mount Everest", "K2", "Kangchenjunga", "Lhotse"],
+    answer: "Mount Everest",
+  },
+  {
+    question: "In what year did World War II end?",
+    options: ["1939", "1945", "1955", "1965"],
+    answer: "1945",
+  },
+  {
+    question: "Who wrote the famous novel 'To Kill a Mockingbird'?",
+    options: [
+      "Mark Twain",
+      "F. Scott Fitzgerald",
+      "Harper Lee",
+      "Ernest Hemingway",
+    ],
+    answer: "Harper Lee",
+  },
+  {
+    question: "Which planet is known as the 'Red Planet'?",
+    options: ["Saturn", "Mars", "Jupiter", "Uranus"],
+    answer: "Mars",
+  },
+  {
+    question: "Who is the current president of Russia?",
+    options: [
+      "Vladimir Putin",
+      "Dmitry Medvedev",
+      "Nikolay Valuev",
+      "Sergei Shoigu",
+    ],
+    answer: "Vladimir Putin",
+  },
+  {
+    question: "What is the capital of Australia?",
+    options: ["Sydney", "Melbourne", "Canberra", "Perth"],
+    answer: "Canberra",
+  },
+  {
+    question: "Which river is known as the 'Father of Rivers'?",
+    options: ["Nile", "Yellow", "Amazon", "Mississippi"],
+    answer: "Nile",
+  },
 ];
 
 function Quiz() {
@@ -38,7 +98,7 @@ function Quiz() {
       alert("Incorrect!");
     }
     setCurrentQuestion(currentQuestion + 1);
-    if (currentQuestion >= questions.length) {
+    if (currentQuestion >= 3) {
       alert(`Game over! Your score is ${score}`);
       return;
     }

@@ -1,5 +1,4 @@
 import "./App.css";
-import Array from "./components/Array/Array";
 import Form from "./components/Form/Form";
 import Counter from "./components/Counter/Counter";
 import Quiz from "./components/Quiz/Quiz";
