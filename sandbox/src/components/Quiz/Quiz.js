@@ -112,6 +112,10 @@ function Quiz() {
     );
   }
 
+  function stopTimer() {
+    clearInterval(timer);
+  }
+
   return (
     <div>
       <h1>QUIZ</h1>
