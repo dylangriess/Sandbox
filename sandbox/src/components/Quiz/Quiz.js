@@ -37,6 +37,11 @@ function TriviaGame() {
     } else {
       alert("Incorrect!");
     }
+    setCurrentQuestion(currentQuestion + 1);
+    if (currentQuestion >= questions.length) {
+      alert(`Game over! Your score is ${score}`);
+      return;
+    }
   }
 
   return <div>Quiz</div>;
