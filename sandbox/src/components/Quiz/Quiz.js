@@ -104,6 +104,14 @@ function Quiz() {
     }
   }
 
+  function startTimer() {
+    setTimer(
+      setInterval(() => {
+        setTimeLeft(timeLeft - 1);
+      }, 1000)
+    );
+  }
+
   return (
     <div>
       <h1>QUIZ</h1>
